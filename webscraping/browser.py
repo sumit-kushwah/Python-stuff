@@ -1,4 +1,10 @@
 import webbrowser
+import argparse
 
-url = 'https://github.com/sumit-kushwah?tab=repositories'
+parser = argparse.ArgumentParser()
+parser.add_argument('text', help="text to be searched with google'")
+
+args = parser.parse_args()
+
+url = "https://www.google.com/search?q=" + args.text
 webbrowser.open(url)
